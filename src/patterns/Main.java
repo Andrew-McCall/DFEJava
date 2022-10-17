@@ -1,24 +1,22 @@
 package patterns;
 
-import patterns.stratgry.Boat;
-import patterns.stratgry.Car;
-import patterns.stratgry.Driver;
+import patterns.stratgry.exercises.Russian;
+import patterns.stratgry.exercises.Translator;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Driver driver = new Driver(new Car());
-		driver.pilot();
+		Translator translator = new Translator();
+		System.out.println(translator.getName());
+		System.out.println(translator.getHello());
+		System.out.println(translator.getFarewell());
 
-		driver.setVehicle(new Boat());
-		driver.pilot();
-		driver.honk();
+		translator.setLanguage(new Russian());
+		System.out.println(translator.getName());
+		System.out.println(translator.getHello());
+		System.out.println(translator.getFarewell());
 
-		driver.setVehicle(new Car());
-		driver.pilot();
-
-		driver.honk();
 	}
 
 }
